@@ -15,14 +15,7 @@ The project is intended for **learning and practice**.
   - `casting.py` – examples of casting values to float and string  
   - `strmethod.py` – string methods: `upper()`, `lower()`, `split()`, `join()`, etc.
 
-- **Practice2** – Python control flow:
-  - **Boolean** – boolean values, operators, comparisons  
-  - **If/Else** – if statements, if-elif-else, short-hand if  
-  - **Loops** – for loops, while loops, `break` and `continue` examples
-
----
-
-## How to Run
+  ## How to Run
 
 1. Make sure **Python 3.x** is installed.
 2. Open terminal/command prompt and navigate to the folder.
