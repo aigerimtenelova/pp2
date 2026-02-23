@@ -1,4 +1,4 @@
-# Practice Python Projects – Practice-03
+# Practice Python Projects –
 
 This repository contains Python programs that focus on **functions, lambda expressions, classes, and inheritance**.  
 The project is designed for **learning, practicing, and understanding core Python concepts**.
