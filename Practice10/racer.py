@@ -41,7 +41,7 @@ class Player(pygame.sprite.Sprite):
 
         if keys[pygame.K_RIGHT] and self.rect.right < WIDTH:
             self.rect.move_ip(5, 0)
-
+ 
 
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
