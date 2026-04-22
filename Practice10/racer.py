@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(__file__)
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load(os.path.join(BASE_DIR, "images", "player.jpg"))
+        self.image = pygame.image.load(os.path.join(BASE_DIR, "images", "Player.png"))
         self.rect = self.image.get_rect()
         self.rect.center = (200, 500)
 
@@ -46,7 +46,7 @@ class Player(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load(os.path.join(BASE_DIR, "images", "Enemy.jpg"))
+        self.image = pygame.image.load(os.path.join(BASE_DIR, "images", "Enemy.png"))
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, WIDTH - 40), 0)
 
@@ -98,10 +98,10 @@ while True:
     for coin in coins:
         coin.move()
 
-    if pygame.sprite.collide_rect(player, enemy):
-        screen.fill(RED)
+    if pygame.sprite.collide_rect(player, enemy): 
+        screen.fill(RED) 
         pygame.display.update()
-        pygame.time.delay(1500)
+        pygame.time.delay(1500) 
         pygame.quit()
         sys.exit()
 
