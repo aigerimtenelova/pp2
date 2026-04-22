@@ -5,7 +5,6 @@ import os
 
 
 pygame.init()
-pygame.mixer.init()
 
 
 WHITE = (255, 255, 255)
@@ -28,23 +27,6 @@ clock = pygame.time.Clock()
 # Fonts
 score_font = pygame.font.SysFont("Verdana", 25)
 
-# --- ЗВУКИ ---
-eat_sound = None
-
-try:
-    print("Проверка файлов...")
-    print("Музыка:", os.path.exists("images/snake.wav"))
-    print("Еда:", os.path.exists("images/eat_sound.wav"))
-
-    pygame.mixer.music.load("images/snake.wav")
-    pygame.mixer.music.set_volume(0.5)
-
-    eat_sound = pygame.mixer.Sound("images/eat_sound.wav")
-
-    print("Звук успешно загружен ✅")
-
-except Exception as e:
-    print("Ошибка загрузки звука ❌:", e)
 
 
 
@@ -63,12 +45,6 @@ def gameLoop():
     game_over = False
     game_close = False
 
-  
-    try:
-        pygame.mixer.music.play(-1)
-        print("Музыка играет 🎵")
-    except Exception as e:
-        print("Ошибка воспроизведения:", e)
 
     x1 = WIDTH / 2
     y1 = HEIGHT / 2
