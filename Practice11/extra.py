@@ -34,7 +34,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load(
-            os.path.join(BASE_DIR, "..", "Practice10", "images", "player.jpg")
+            os.path.join(BASE_DIR, "..", "Practice10", "images", "Player.png")
         )
         self.rect = self.image.get_rect()
         self.rect.center = (200, 500)
@@ -53,7 +53,7 @@ class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load(
-            os.path.join(BASE_DIR, "..", "Practice10", "images", "Enemy.jpg")
+            os.path.join(BASE_DIR, "..", "Practice10", "images", "Enemy.png")
         )
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, WIDTH - 40), 0)
