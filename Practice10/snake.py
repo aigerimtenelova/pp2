@@ -62,7 +62,6 @@ def gameLoop():
     while not game_over:
 
         while game_close:
-            pygame.mixer.music.stop()
 
             dis.fill(BLUE)
             msg = score_font.render("Game Over! Press C-Play or Q-Quit", True, RED)
