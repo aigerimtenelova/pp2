@@ -11,7 +11,11 @@ MUSIC_FILE = "assets/music.mp3"
 class Interface:
     def __init__(self):
         pygame.init()
-        pygame.mixer.init()  # Инициализация звукового движка
+
+        try:
+            pygame.mixer.init()
+        except:
+            print("No audio support, continuing without sound")
         
         self.canvas = pygame.display.set_mode((VIEW_WIDTH, VIEW_HEIGHT))
         pygame.display.set_caption("Cyber Snake v2.0")
