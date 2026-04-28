@@ -2,7 +2,15 @@ import psycopg2
 from config import DATABASE_ACCESS
 
 def connect_db():
-    return psycopg2.connect(**DATABASE_ACCESS)
+    conn = psycopg2.connect(
+        host="localhost",
+        database="postgres",
+        user="postgres",
+        password="12345678",
+        port="5432"
+    )
+    conn.set_client_encoding("UTF8")
+    return conn
 
 def setup_tables():
     with connect_db() as conn:

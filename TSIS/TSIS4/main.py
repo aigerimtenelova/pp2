@@ -1,6 +1,7 @@
 import pygame
 import sys
 import os
+import traceback
 import json
 from db import setup_tables, record_match, fetch_leaderboard, fetch_best_score
 from game import SnakeEngine, VIEW_WIDTH, VIEW_HEIGHT
@@ -37,7 +38,7 @@ class Interface:
         default = {"snake_color": (0, 255, 100), "grid": True, "music": True}
         if os.path.exists(self.pref_path):
             try:
-                with open(self.pref_path, "r") as f:
+                with open(self.pref_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     data["snake_color"] = tuple(data["snake_color"])
                     if "music" not in data: data["music"] = True
@@ -193,7 +194,7 @@ if __name__ == "__main__":
     try:
         app = Interface()
         app.menu()
+    
     except Exception as e:
-        print(f"Критическая ошибка: {e}")
-    finally:
-        pygame.quit()
+        print("КРИТИЧЕСКАЯ ОШИБКА:")
+        traceback.print_exc()
